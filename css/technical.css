@@ -1,0 +1,377 @@
+.technical {
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    width: 100%;
+    height: 40rem;
+}
+
+.technical .background-color {
+    position: absolute;
+    background: yellow;
+    width: 50%;
+    height: 100%;
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    z-index: 1;
+}
+
+.technical .grid {
+    grid-template-columns: 50% 30% 20%;
+}
+
+.technical .flex {
+    justify-content: space-between;
+}
+
+.technical h2 {
+    padding: 30px 0;
+    margin-left: 10rem;
+}
+
+.features {
+    position: absolute;
+    text-transform: uppercase;
+}
+
+.features i {
+    position: absolute;
+    font-size: 7px;
+    color: var(--golden-color);
+    z-index: 2;
+}
+
+.features .body i::after {
+    position: absolute;
+    content: '';
+    width: 60px;
+    height: 1px;
+    background: var(--golden-color);
+    margin-left: -13px;
+    margin-top: -20px;
+    transform: rotate( -48deg);
+}
+
+.features .body {
+    margin-left: 18rem;
+    transform: translateY(-2rem);
+}
+
+.features .engine i::after {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 60px;
+    background: var(--golden-color);
+    margin-left: -4px;
+    margin-top: 2px;
+}
+
+.features .engine {
+    margin-left: 23rem;
+    transform: translateY(11rem);
+}
+
+.features .wheel i::after {
+    position: absolute;
+    content: '';
+    width: 60px;
+    height: 1px;
+    background: var(--golden-color);
+    margin-left: -57px;
+    margin-top: 23px;
+    transform: rotate( -40deg);
+}
+
+.features .wheel {
+    margin-left: 13rem;
+    transform: translateY(8rem);
+}
+
+.features .body i {
+    margin-left: 5rem;
+    margin-top: 55px;
+}
+
+.features .engine i {
+    margin-left: 5rem;
+    margin-top: -7rem;
+}
+
+.features .wheel i {
+    margin-left: 9rem;
+    margin-top: -6rem;
+}
+
+.technical-model img {
+    position: relative;
+    width: 35rem;
+    margin-top: 6rem;
+    z-index: 1;
+}
+
+.technical-details {
+    text-transform: uppercase;
+    transform: translateX(25rem);
+    margin-top: -10rem;
+}
+
+.technical-details .key {
+    font-weight: bold;
+    margin-left: 14rem;
+}
+
+.technical-details .value {
+    opacity: .8;
+}
+
+.technical-details li {
+    padding: 10px 0;
+    border-bottom: 1px solid #5f5f5f;
+}
+
+.view-details {
+    text-align: right;
+    transform: translateX(45rem);
+    margin-top: -7rem;
+    text-transform: uppercase;
+}
+
+.view-active {
+    cursor: pointer;
+}
+
+.view-details span.details {
+    font-size: 12px;
+    margin-right: 35px;
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.view-active:hover span.details {
+    opacity: 1;
+}
+
+.view-active.active span.details {
+    opacity: 1;
+}
+
+.view-details i {
+    font-size: 6px;
+    transition: all .3s ease;
+}
+
+.view-details i::after {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 1px;
+    background: var(--golden-color);
+    margin-left: -28px;
+    transform: translateY(3px);
+    transition: all 3.s ease;
+    opacity: 0;
+}
+
+.view-active:hover i {
+    font-size: 10px;
+    color: var(--golden-color);
+    border: 1px solid var(--golden-color);
+    padding: 3px;
+    border-radius: 50%;
+}
+
+.view-active.active i {
+    font-size: 10px;
+    color: var(--golden-color);
+    border: 1px solid var(--golden-color);
+    padding: 3px;
+    border-radius: 50%;
+}
+
+.view-active:hover i::after {
+    opacity: 1;
+}
+
+.view-active.active i::after {
+    opacity: 1;
+}
+
+.view-details p {
+    color: #5f5f5f;
+    line-height: 8px;
+    padding-bottom: 20px;
+}
+
+.view-active:hover p {
+    color: #f4f4f4;
+}
+
+.view-active.active p {
+    color: #f4f4f4;
+}
+
+.view-active:hover span.view-nav {
+    margin-right: 15px;
+}
+
+.view-active.active span.view-nav {
+    margin-right: 15px;
+}
+
+.model-tab {
+    position: relative;
+    display: flex;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(30rem);
+    padding: 5px 0;
+    /* z-index: -3; */
+}
+
+.model-tab p {
+    text-transform: uppercase;
+    margin: 0 4rem;
+    transform: translateX(38rem);
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.model-tab p.active {
+    color: var(--golden-color);
+}
+
+.model-tab p:hover {
+    color: var(--golden-color);
+}
+
+.model-tab p.active::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: var(--golden-color);
+    transform: translateY(-5px);
+    transition: all .3s ease;
+}
+.model-tab p:hover::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: var(--golden-color);
+    transform: translateY(-5px);
+}
+
+.tech-content {
+    position: relative;
+}
+
+#tab-content {
+    position: absolute;
+    display: none;
+}
+#tab-content.active {
+    display: block;
+}
+
+@media(max-width: 1024px) {
+    .technical-model img {
+        width: 25rem;
+    }
+
+    .technical-details {
+        transform: translateX(20rem);
+        font-size: 14px;
+        margin-top: -5rem;
+    }
+
+    .technical-details .key {
+        margin-left: 5rem;
+    }
+
+    .view-details {
+        transform: translateX(33rem);
+        margin-top: -7rem;
+    }
+
+    .model-tab p {
+        margin: 0 2rem;
+        transform: translateX(30rem);
+    }
+}
+
+@media(max-width: 768px) {
+    .technical {
+        height: 35rem;
+    }
+
+    .technical h2 {
+        margin-left: 5rem;
+    }
+
+    .technical-model img {
+        width: 20rem;
+    }
+
+    .technical-details {
+        transform: translateX(15rem);
+        font-size: 12px;
+        margin-top: -5rem;
+    }
+
+    .view-details {
+        transform: translateX(23rem);
+        margin-top: -7rem;
+        font-size: 12px;
+    }
+
+    .model-tab {
+        transform: translateY(25rem);
+    }
+
+    .model-tab p {
+        margin: 0 1.5rem;
+        transform: translateX(20rem);
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 500px) {
+
+    .technical {
+        height: 45rem;
+    }
+    .technical .background-color {
+        display: none;
+    }
+
+    .technical .flex {
+        flex-direction: column;
+    }
+
+    .technical-details.flex {
+        flex-direction: row;
+    }
+
+    .technical-details {
+        transform: translateX(-1rem);
+        font-size: 12px;
+        margin-top: 10rem;
+    }
+
+    .view-details {
+        transform: translateX(8rem);
+        margin-top: -7rem;
+    }
+    .view-details .view-active {
+       margin-left: 10px;
+    }
+
+    .model-tab {
+        transform: translateY(2rem);
+    }
+
+    .model-tab p {
+        margin: 0 2.5rem;
+        transform: translateX(0);
+    }
+}

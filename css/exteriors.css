@@ -1,0 +1,131 @@
+.exteriors {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/exterior-bg-3.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    z-index: 2;
+}
+
+.ext-bg-1 img, .ext-bg-2 img {
+    position: absolute;
+    width: 510px;
+    height: 400px;
+    filter: opacity(0.2);
+}
+
+.ext-bg-1 img {
+    margin-top: -5rem;
+    left: 0;
+}
+
+.ext-bg-2 img {
+    margin-top: 22rem;
+    left: 0;
+}
+
+.exterior-content {
+    position: relative;
+    text-align: center;
+}
+
+.exterior-content p {
+    opacity: .8;
+    padding: 30px 0;
+    width: 90%;
+}
+
+.views i {
+    border: 1px solid #f4f4f4;
+    border-radius: 50%;
+}
+
+.views p {
+    padding: 15px 0;
+}
+
+.view-photo {
+    transform: translateX(14rem);
+}
+
+.view-video {
+    transform: translateX(12rem);
+}
+
+.view-3d {
+    transform: translateX(10rem);
+}
+
+.ext-img {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.ext-img img {
+    width: 220px;
+    height: 110px;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.ext-img-1 {
+    transform: translateX(85px);
+    z-index: -1;
+}
+
+.ext-img-2 {
+    margin-top: -18px;
+    z-index: 1;
+}
+
+.ext-img-3 {
+    transform: translateX(48px);
+    margin-top: -32px;
+    z-index: -1;
+}
+
+.ext-img-4 {
+    transform: translateX(-57px);
+    z-index: 1;
+    margin-top: -20px;
+}
+
+@media(max-width: 768px) {
+    .views p {
+        font-size: 14px;
+    }
+
+    .ext-img img {
+        width: 180px;
+        height: 80px;
+    }
+    .ext-bg-1 img, .ext-bg-2 img {
+        width: 350px;
+        height: 250px;
+    }
+
+    .ext-bg-1 img {
+        margin-top: -3rem;
+    }
+
+    .exterior-content p {
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 500px) {
+    .exteriors .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .exteriors {
+        padding-top: 3rem;
+        background: none;
+    }
+
+    .exterior-images {
+        justify-self: center;
+        margin: 0 auto;
+    }
+}
